@@ -152,7 +152,7 @@ This repository focuses on a specific steganography technique and is designed
 For a **more advanced and combined implementation** that includes
 image and audio steganography with file encryption support, refer to:
 
- 🔗 **[StegaVault](https://github.com/your-username/StegaVault)**
+ 🔗 **[StegaVault-GUI](https://github.com/ShakalBhau0001/StegaVault-GUI)**
 
 ---
 
