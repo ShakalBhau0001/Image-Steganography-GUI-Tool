@@ -144,6 +144,14 @@ python image_steganography.py
 
 ---
 
+## ⚠️ Disclaimer
+
+This project is for educational and research purposes only.
+It is not designed to provide real-world secure communication.
+Steganography alone does not guarantee secrecy.
+
+---
+
 ## 🪪 Author
 
 > **Creator: Shakal Bhau**
