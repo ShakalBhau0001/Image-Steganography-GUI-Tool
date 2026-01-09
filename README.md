@@ -144,10 +144,22 @@ python image_steganography.py
 
 ---
 
+## 📦 Extended Version
+
+This repository focuses on a specific steganography technique and is designed
+**for learning and experimentation**.
+
+For a **more advanced and combined implementation** that includes
+image and audio steganography with file encryption support, refer to:
+
+ 🔗 **[StegaVault](https://github.com/your-username/StegaVault)**
+
+---
+
 ## ⚠️ Disclaimer
 
-This project is for educational and research purposes only.
-It is not designed to provide real-world secure communication.
+This project is for **educational and research purposes only**.
+It is not designed to provide real-world secure communication. 
 Steganography alone does not guarantee secrecy.
 
 ---
