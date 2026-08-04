@@ -1,13 +1,14 @@
+import base64
 import os
+import secrets
 import struct
 import tkinter as tk
 from tkinter import filedialog, messagebox, scrolledtext
-from PIL import Image
-import secrets
-import base64
+
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.fernet import Fernet
+from PIL import Image
 
 # Key derivation and Fernet wrapper
 
@@ -52,7 +53,6 @@ def embed_payload_in_image(
     width, height = img.size
     num_pixels = width * height
     total_channels = num_pixels * 3  # we'll use R,G,B channels for embedding
-
     bits_needed = bits_needed_for_bytes(len(payload))
     if bits_needed > total_channels:
         raise ValueError(
@@ -61,7 +61,6 @@ def embed_payload_in_image(
 
     pixels = list(img.getdata())  # each pixel is (R,G,B,A)
     bit_iter = bytes_to_bits(payload)
-
     new_pixels = []
     channel_idx = 0  # we've used so far among R,G,B channels across all pixels
 
@@ -177,9 +176,6 @@ def extract_and_decrypt(stego_image_path: str, password: str):
         ) from e
 
     return decrypted  # bytes
-
-
-# Tkinter GUI
 
 
 class ImageStegApp:
@@ -441,7 +437,6 @@ class ImageStegApp:
             self.set_status("Unexpected error.")
 
 
-# Run the application
 if __name__ == "__main__":
     root = tk.Tk()
     app = ImageStegApp(root)
